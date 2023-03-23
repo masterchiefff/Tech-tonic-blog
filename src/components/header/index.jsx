@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SearchBar from '../search'
+import SearchBar from '../search/index'
 
 const Header = () => {
   return (
     <div className='pb-8 border-b-2 border-stone-200'>
         <div className='flex'>
-            <div className='grow-[4]'>
+            <div className='grow-[1]'>
                 <SearchBar />
             </div>
-            <div className='flex-auto flex gap-[1rem] justify-end'>
+            <div className='grow-[4] flex gap-[1rem] items-center justify-end'>
                 <Link to="">
                     <span className='text-2xl block text-stone-500'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

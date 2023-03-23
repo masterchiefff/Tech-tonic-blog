@@ -22,7 +22,7 @@ function App() {
 }
 
 const Root = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn] = useState(true);
   return (
     <div className='tt-container flex'>
       {isLoggedIn ?  
