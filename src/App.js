@@ -4,6 +4,8 @@ import {createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProv
 import { Home } from './pages/Home/index.jsx';
 import Menu from './components/sections/menu';
 import Header from './components/header';
+import Profile from './components/profile';
+import OtherSection from './components/sections/others';
 
 function App() {
   const router = createBrowserRouter(
@@ -24,20 +26,23 @@ function App() {
 const Root = () => {
   const [isLoggedIn] = useState(true);
   return (
-    <div className='tt-container flex'>
+    <div className='tt-container flex relative'>
       {isLoggedIn ?  
-      <div className='tt-sidemenu pt-0 p-5 w-20 border-r-2 border-stone-200 h-screen'>
+      <div className='tt-sidemenu  border-r-2 border-stone-200 pt-0 p-5 w-20'>
         <Menu />
       </div>
       : ''}
 
-      <div className='grow-[4] p-8'>
+      <div className='w-2/3 p-8'>
         <Header />
         <Outlet />
       </div>
 
-      <div className='p-8 grow border-l-2 border-stone-200 h-screen'>
-        <p>last part</p>
+      <div className='p-8 grow border-l-2 border-stone-200'>
+        <div className='fixed'>
+          <Profile />
+          <OtherSection />
+        </div>
       </div>
     </div>
   )

@@ -11,9 +11,9 @@ const Menu = () => {
         {title: 'Logout', icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" /></svg>}
     ]
     return (
-        <div className='tt-menu'>
-            <div className='tt-brnading pt-8 pb-8'>
-                <Link to='/'><img src='' alt="tt-logo"/></Link>
+        <div className='tt-menu fixed'>
+            <div className='tt-brnading w-7 h-7 pt-8 pb-8'>
+                <Link to='/'><img className='object-cover' src='https://w7.pngwing.com/pngs/31/164/png-transparent-instagram-vector-brand-logos-icon-thumbnail.png' alt="tt-logo"/></Link>
             </div>
             <ul className='pt-2'>
                 {Menus.map((menu, index) => (
